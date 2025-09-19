@@ -40,7 +40,7 @@ public:
 
     void insertBefore(int key, int value) {
         if (head == NULL) {
-            cout << "List is empty.\n";
+            cout << "List is empty." << endl;
             return;
         }
         if (head->data == key) {
@@ -52,7 +52,7 @@ public:
             temp = temp->next;
         }
         if (temp->next == NULL) {
-            cout << "Node " << key << " not found.\n";
+            cout << "Node " << key << " not found." << endl;
         } else {
             Node* newNode = new Node();
             newNode->data = value;
@@ -67,7 +67,7 @@ public:
             temp = temp->next;
         }
         if (temp == NULL) {
-            cout << "Node " << key << " not found.\n";
+            cout << "Node " << key << " not found." << endl;
         } else {
             Node* newNode = new Node();
             newNode->data = value;
@@ -78,7 +78,7 @@ public:
 
     void deleteFromBeginning() {
         if (head == NULL) {
-            cout << "List is empty.\n";
+            cout << "List is empty." << endl;
             return;
         }
         Node* temp = head;
@@ -88,7 +88,7 @@ public:
 
     void deleteFromEnd() {
         if (head == NULL) {
-            cout << "List is empty.\n";
+            cout << "List is empty." << endl;
             return;
         }
         if (head->next == NULL) {
@@ -106,7 +106,7 @@ public:
 
     void deleteNode(int key) {
         if (head == NULL) {
-            cout << "List is empty.\n";
+            cout << "List is empty." << endl;
             return;
         }
         if (head->data == key) {
@@ -118,7 +118,7 @@ public:
             temp = temp->next;
         }
         if (temp->next == NULL) {
-            cout << "Node " << key << " not found.\n";
+            cout << "Node " << key << " not found." << endl;
         } else {
             Node* del = temp->next;
             temp->next = temp->next->next;
@@ -131,18 +131,18 @@ public:
         int pos = 1;
         while (temp != NULL) {
             if (temp->data == key) {
-                cout << "Node " << key << " found at position " << pos << ".\n";
+                cout << "Node " << key << " found at position " << pos << "." << endl;
                 return;
             }
             temp = temp->next;
             pos++;
         }
-        cout << "Node " << key << " not found.\n";
+        cout << "Node " << key << " not found." << endl;
     }
 
     void display() {
         if (head == NULL) {
-            cout << "List is empty.\n";
+            cout << "List is empty." << endl;
             return;
         }
         Node* temp = head;
@@ -151,7 +151,7 @@ public:
             cout << temp->data << " ";
             temp = temp->next;
         }
-        cout << "\n";
+        cout << endl;
     }
 };
 
@@ -160,17 +160,17 @@ int main() {
     int choice, value, key;
 
     do {
-        cout << "\n--- Menu ---\n";
-        cout << "1. Insert at Beginning\n";
-        cout << "2. Insert at End\n";
-        cout << "3. Insert Before a Node\n";
-        cout << "4. Insert After a Node\n";
-        cout << "5. Delete from Beginning\n";
-        cout << "6. Delete from End\n";
-        cout << "7. Delete a Specific Node\n";
-        cout << "8. Search for a Node\n";
-        cout << "9. Display List\n";
-        cout << "0. Exit\n";
+        cout << endl << "--- Menu ---" << endl;
+        cout << "1. Insert at Beginning" << endl;
+        cout << "2. Insert at End" << endl;
+        cout << "3. Insert Before a Node" << endl;
+        cout << "4. Insert After a Node" << endl;
+        cout << "5. Delete from Beginning" << endl;
+        cout << "6. Delete from End" << endl;
+        cout << "7. Delete a Specific Node" << endl;
+        cout << "8. Search for a Node" << endl;
+        cout << "9. Display List" << endl;
+        cout << "0. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -219,10 +219,10 @@ int main() {
             list.display();
             break;
         case 0:
-            cout << "Exiting...\n";
+            cout << "Exiting" << endl;
             break;
         default:
-            cout << "Invalid choice!\n";
+            cout << "Invalid choice!" << endl;
         }
     } while (choice != 0);
 
